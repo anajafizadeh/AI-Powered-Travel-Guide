@@ -52,22 +52,6 @@ def scrape_attractions(destination):
     return attractions
 
 def generate_itinerary(destination, days, preferences, attractions):
-    # # Load the model and tokenizer
-    # model_name = "EleutherAI/gpt-neo-125M"
-    # tokenizer = AutoTokenizer.from_pretrained(model_name)
-    # model = AutoModelForCausalLM.from_pretrained(model_name)
-
-    # # Create the pipeline
-    # generator = pipeline('text-generation', model=model, tokenizer=tokenizer)
-
-    # # Generate the itinerary
-    # prompt = (
-    #     f"Plan a {days}-day trip to {destination} with a focus on {preferences}. "
-    #     f"Include these attractions in the itinerary: {', '.join(attractions)}. "
-    #     "Provide a daily breakdown of activities."
-    # )
-    # result = generator(prompt, max_length=150, num_return_sequences=1, truncation=True)
-    # return result[0]['generated_text']
     prompt = (
         f"Plan a {days}-day trip to {destination} with a focus on {preferences}. "
         f"Include these attractions in the itinerary: {', '.join(attractions)}. "
