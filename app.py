@@ -6,7 +6,7 @@ import openai
 from openai import OpenAI
 from transformers import pipeline, AutoModelForCausalLM, AutoTokenizer
 
-client = OpenAI(api_key='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')
+client = 'OpenAI key is removed'
 
 app = Flask(__name__)
 
