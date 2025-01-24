@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    color: #333;
+    position: relative; /* Ensure proper positioning for the pseudo-element */
+    overflow-y: auto; /* Allow vertical scrolling */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+body::before {
+    content: "";
+    position: fixed; /* Ensure the background stays in place while scrolling */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('/static/images/pexels-eberhardgross-640809.jpg');
+    background-size: cover; /* Adjust the image size */
+    background-position: center; /* Center the image */
+    filter: blur(5px); /* Apply the blur effect */
+    z-index: -1; /* Place the background behind the content */
+}
+
+h1 {
+    color: #2c3e50;
+}
+
+.itinerary-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-box {
+    margin: 0 auto; /* Center horizontally */
+    padding: 20px 30px;
+    background: rgba(255, 255, 255, 0.9); /* White with slight transparency */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 90%; /* Ensure it fits smaller screens */
+    position: fixed; /* Use fixed to ensure it's always in view */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center vertically and horizontally */
+    box-sizing: border-box; /* Include padding in width calculations */
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px; /* Add consistent padding */
+    margin-bottom: 10px; /* Space between input fields */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    box-sizing: border-box; /* Include padding in width */
+    font-size: 16px; /* Adjust font size */
+}
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+.itinerary-content h2, .itinerary-content h3 {
+    color: #34495e;
+}
+
+.itinerary-content ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
